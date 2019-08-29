@@ -25,6 +25,11 @@ app.get('/users', (req, res) => {
 });
 app.get('/users/:id', (req, res) => {
   console.log(req.params.id);
+  res.json({
+    success: true,
+    message: 'successfully custom request!',
+    data: {id:req.params.id}
+  })
 });
 
 app.post('/login', (req, res) => {
